@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.sparti.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-gold overflow-auto">
+
+  <div class="container-fluid py-1 py-md-3 py-lg-5 bg-ice">
+    <div class="box">
+      <div class="box-row flex-md-row flex-column d-flex">
+        <div class="box-cell my-2 my-md-0 px-1 py-1 col-12 col-md-7 align-items-center align-self-center">
+          <img src="/portals/0/Images/homepage/real-sparta-banner.png" class="d-block img-fluid" alt="real-sparta">
+        </div>
+        <div class="box-cell px-1 py-1 my-2 my-md-0 justify-content-center flex-column col-12 col-md-5 d-flex">
+          <div class="text-gold title homepage-section-title my-auto d-flex">
+          </div>
+          <div class="ps-0 mb-auto text-dark-blue text-container homepage-section-subtitle mainText d-flex">
+          </div>
+          <div class="my-auto w-auto h-auto d-flex  ps-0">
+            <a href="" class="ahref-div my-4 my-md-0 d-flex align-items-center">
+              <div class="text-gold fw-bold text-start discover pe-2"></div><i
+                class="d-flex align-self-center ps-2 fs-5 fw-bold bi text-gold bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    let populateTexts = {
+      populate: function () {
+
+        var btnText = "";
+        var btnTextGR = "Ανακαλύψτε";
+        var btnTextUS = "Discover";
+
+        var title = "";
+        var titleGr = "Σπάρτη, μια από τις ομορφότερες πόλεις της Ελλάδας !";
+        var titleUS = "Sparta, one of the most beautiful cities in Greece!";
+
+        var brLines = '<br><br>';
+        var mainText = "";
+
+        var mainTextGR = ` Ένας τόπος που θα σας εκπλήξει ευχάριστα με τη ζωντανή ιστορία του, το επιβλητικό τοπίο και τους
+            φιλόξενους
+            ανθρώπους του!
+            Ένας πολύπλευρος προορισμός, που προσφέρει υπέροχες διαδρομές, αξιοθέατα, πλούσιες εικόνες, γεύσεις και
+            συναισθήματα!
+            Το ένδοξο παρελθόν της πόλης δεν είναι ο μόνος λόγος για να την επισκεφθείτε! Ανακαλύψτε τον τόπο πέρα από
+            το
+            μύθο και απολαύστε μοναδικές εμπειρίες σε ένα περιβάλλον απαράμιλλης φυσικής ομορφιάς.`
+
+          + brLines +
+          `Ανακαλύψτε την αληθινή Σπάρτη!`;
+
+
+        var mainTextUS = `A place that will pleasantly surprise you with its lively history, imposing landscape and theirs
+            hospitable
+            his people!
+            A versatile destination, offering great routes, attractions, rich images, and flavors
+            feelings!
+            The glorious past of the city is not the only reason to visit it! Discover the place beyond
+            the
+            legend and enjoy unique experiences in an environment of unparalleled natural beauty.`
+          + brLines +
+          `Discover the real Sparta!`;
+
+        if (window.location.href.indexOf("el-gr") > -1) {
+          title = titleGr;
+          btnText = btnTextGR;
+          mainText = mainTextGR;
+          ahref = "/el-gr/Discover";
+        }
+        else {
+          title = titleUS;
+          btnText = btnTextUS;
+          mainText = mainTextUS;
+          ahref = "/en-us/Discover";
+        }
+        document.querySelector(".ahref-div").href = ahref;
+        document.querySelector(".mainText").innerHTML = mainText;
+        document.querySelector(".discover").innerHTML = btnText;
+        document.querySelector(".title").innerHTML = title;
+      }
+    }
+
+
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      populateTexts.populate();
+    });
+
+  </script>
+
+  <script src="/js/bootstrap.bundle.min.js" />
+</body>
+
+</html>

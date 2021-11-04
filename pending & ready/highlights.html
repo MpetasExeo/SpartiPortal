@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.sparti.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-gold overflow-auto">
+
+  <div class="container-fluid py-1 py-md-3 py-lg-5 bg-ice-dark">
+    <div class="container">
+
+      <div
+        class="col-12 py-1 py-md-3 py-lg-5 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
+      </div>
+
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="card border-0 discover-card bg-dark shadow-lg text-white">
+            <img src="/portals/0/Images/highlights/highlights/Taygetos-1.jpg" class="card-img ph0" alt="...">
+            <div class="card-img-overlay bg-transparent p-0 h-auto mt-auto">
+              <div class="card-title ct0"></div>
+              <a href="" class="moreBtn ahref0 bg-primary">
+                <i class="bi bi-arrow-right scalex text-white fw-bolder opacity-100 fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="card border-0 discover-card bg-dark shadow-lg text-white">
+            <img src="/portals/0/Images/highlights/highlights/Knakionas-1.jpg" class="card-img ph1" alt="...">
+            <div class="card-img-overlay bg-transparent p-0 h-auto mt-auto">
+              <div class="card-title ct1"></div>
+              <a href="" class="moreBtn ahref1 bg-primary">
+                <i class="bi bi-arrow-right scalex text-white fw-bolder opacity-100 fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="card border-0 discover-card bg-dark shadow-lg text-white">
+            <img src="" class="card-img ph2" alt="...">
+            <div class="card-img-overlay bg-transparent p-0 h-auto mt-auto">
+              <div class="card-title ct2"></div>
+              <a href="" class="moreBtn ahref2 bg-primary">
+                <i class="bi bi-arrow-right scalex text-white fw-bolder opacity-100 fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="card border-0 discover-card bg-dark shadow-lg text-white">
+            <img src="/" class="card-img ph3" alt="...">
+            <div class="card-img-overlay bg-transparent p-0 h-auto mt-auto">
+              <div class="card-title ct3"></div>
+              <a href="" class="moreBtn ahref3 bg-primary">
+                <i class="bi bi-arrow-right scalex text-white fw-bolder opacity-100 fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="card border-0 discover-card bg-dark shadow-lg text-white">
+            <img src="/" class="card-img ph4" alt="...">
+            <div class="card-img-overlay bg-transparent p-0 h-auto mt-auto">
+              <div class="card-title ct4"></div>
+              <a href="" class="moreBtn ahref4 bg-primary">
+                <i class="bi bi-arrow-right scalex text-white fw-bolder opacity-100 fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="card border-0 discover-card bg-dark shadow-lg text-white">
+            <img src="" class="card-img ph5" alt="...">
+            <div class="card-img-overlay bg-transparent p-0 h-auto mt-auto">
+              <div class="card-title ct5"></div>
+              <a href="" class="moreBtn ahref5 bg-primary">
+                <i class="bi bi-arrow-right scalex text-white fw-bolder opacity-100 fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-12 py-1 py-md-3 py-lg-5 d-flex justify-content-center align-content-center">
+        <a href="/" class="ahref-div viewAllHighlights text-gold fs-5 fw-light">
+
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+
+    let populateTextsHighlights2 = {
+      populate: function () {
+
+        var btnText = "";
+        var btnTextGR = "Όλοι οι προορισμοί";
+        var btnTextUS = "All destinations";
+
+        var title = "";
+        var titleGr = "Highlights";
+        var titleUS = "Highlights";
+
+        const destinationsGr = ["Ταΰγετος", "Μυστράς", "Κνακιώνας", "Ιερό του Μενελάου και της Ωραίας Ελένης", "Μουσείο Ελιάς και Ελληνικού Λαδιού", "Σπάρτη"];
+        const destinationsUS = ["Taygetos", "Mystras", "Knakionas", "Sanctuary of Menelaos and the Beautiful Helen", "Museum of Olive and Greek Olive Oil", "Sparta"];
+
+        if (window.location.href.indexOf("el-gr") > -1) {
+          title = titleGr;
+          btnText = btnTextGR;
+
+          destinationsGr.forEach(element => {
+            var indexI = destinationsGr.indexOf(element);
+            var ahrefindex = (indexI).toString();
+
+            var photoUrl = "/portals/0/Images/highlights/" + destinationsUS[destinationsGr.indexOf(element)].toString().replace(/\s/g, "-") + "-1.jpg"
+            var ctSelector = "." + "ct" + ahrefindex;
+            var selector = "." + "ahref" + ahrefindex;
+            var phSelector = "." + "ph" + ahrefindex;
+
+            var ph = document.querySelector(phSelector).src = photoUrl
+            var ct = document.querySelector(ctSelector).innerHTML = element;
+            var a = document.querySelector(selector).href = "/el-gr/" + destinationsUS[destinationsGr.indexOf(element)].toString().replace(/\s/g, "-");
+          });
+
+          btnText = btnTextGR;
+          ahrefHighlights = "/el-gr/Discover";
+        }
+        else {
+          title = titleUS;
+          destinationsUS.forEach(element => {
+            var indexI = destinationsUS.indexOf(element);
+            var ahrefindex = (indexI).toString();
+
+            var photoUrl = "/portals/0/Images/highlights/" + element.replace(/\s/g, "-") + "-1.jpg"
+            var ctSelector = "." + "ct" + ahrefindex;
+            var selector = "." + "ahref" + ahrefindex;
+            var phSelector = "." + "ph" + ahrefindex;
+
+            var ph = document.querySelector(phSelector).src = photoUrl;
+            var ct = document.querySelector(ctSelector).innerHTML = element;
+            var a = document.querySelector(selector).href = "/en-us/" + element.replace(/\s/g, "-");
+          });
+
+          btnText = btnTextUS;
+          ahrefHighlights = "/en-us/Discover";
+        }
+        document.querySelector(".viewAllHighlights").href = ahrefHighlights;
+        document.querySelector(".viewAllHighlights").innerHTML = btnText;
+        document.querySelector(".titleHighlights").innerHTML = title;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      populateTextsHighlights2.populate();
+    });
+
+  </script>
+
+  <script src="/js/bootstrap.bundle.min.js" />
+</body>
+
+</html>
