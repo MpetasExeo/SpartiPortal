@@ -1,18 +1,459 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 html * {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 html,
-body {
+body,
+form {
   height: 100%;
   min-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
+form {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+header {
+  height: 30vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.navbar {
+  background-color: #155564;
+}
+
+.nav-hero {
+  z-index: 0;
+}
+.carousel-bg {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  header {
+    height: 70vh;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+.text-container {
+  width: 89%;
+}
+
+.homepage-section-title {
+  font-family: Noto Serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-bottom: 2.25rem;
+}
+
+.homepage-section-subtitle {
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4375rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
 /* 
 font-family: 'Noto Sans', sans-serif;
 font-family: 'Noto Serif', serif;
  */
+.main-title {
+  font-family: Noto Serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.75rem;
+  letter-spacing: -0.015em;
+  text-align: left;
+  margin-bottom: 3.75rem;
+  word-break: break-word;
+}
+
+.main-subtitle {
+  font-family: Noto Serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6875rem;
+  letter-spacing: 0em;
+  word-break: break-word;
+  text-align: center;
+  margin-bottom: 3.375rem;
+}
+.home-hero {
+  width: 100%;
+  /* height: 80vh !important; */
+  height: 80vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/heros/winter.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mystras-hero {
+  width: 100%;
+  /* height: 80vh !important; */
+  height: 80vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/heros/home-hero.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-hero-1 {
+  width: 100%;
+  height: 80vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/heros/spring.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.home-hero-2 {
+  width: 100%;
+  height: 80vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/heros/summer.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.home-hero-3 {
+  width: 100%;
+  height: 80vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/heros/fall.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.discover-card {
+  max-width: 32.0625rem;
+  max-height: 27.875rem;
+  border-width: 0;
+  border-radius: 0rem !important;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.discover-card:hover {
+  box-shadow: none !important;
+}
+
+.discover-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+  z-index: 0 !important;
+}
+
+.discover-card .card-img-overlay {
+  height: 100%;
+  border-radius: 0px !important   ;
+  background-color: #00000011 !important;
+}
+
+.discover-card:hover .card-img-overlay {
+  height: 100%;
+  background-color: #00000000 !important;
+}
+
+.discover-card .card-title {
+  font-family: Noto Serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.75rem;
+  letter-spacing: 0em;
+  text-align: left;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.discover-card:hover .card-title {
+  visibility: hidden;
+}
+
+.discover-card .moreBtn {
+  position: absolute;
+  width: 6.0625rem;
+  height: 5.375rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  bottom: 0px;
+  right: 0px;
+  visibility: hidden;
+}
+
+.discover-card .moreBtn:hover {
+  background-color: #44bba6 !important  ;
+}
+
+.discover-card:hover .moreBtn {
+  visibility: visible;
+}
+
+.scalex:hover {
+  transform: scaleX(1.5);
+}
+
+.wtd-card .card-img-top {
+  height: 24.75rem;
+  object-fit: cover;
+  border-radius: 0px;
+  z-index: 0 !important;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.wtd-card {
+  height: 36.75rem;
+  width: 24rem;
+  border-radius: 0ch;
+  overflow: visible;
+}
+
+.wtd-card .card-title {
+  font-family: Noto Serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.ahref-div {
+  text-decoration: none !important;
+  display: flex;
+  width: auto;
+  height: auto;
+  /* justify-self: center;
+  align-self: center; */
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.box {
+  /* width: 100%;
+  height: 100%; */
+  display: flex;
+  flex-direction: row;
+}
+
+.box-row {
+  display: table-row;
+}
+.box-cell {
+  display: table-cell;
+}
+
+.bottom-separator {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 17.0625rem;
+  background-image: url("/portals/0/Images/separators/bottom-round-cream.png");
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.carousel-buttons {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  bottom: 0px;
+  right: 0px;
+  transition: all 0.3s ease-in;
+}
+
+.carousel-buttons:hover {
+  background-color: #44bba6 !important;
+}
+
+.btn-text {
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1rems;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.fracNum {
+  font-family: Noto Sans;
+  font-size: 1.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.fracDen {
+  font-family: Noto Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.0625rem;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.scaleonxaxis {
+  transition: all 0.3s ease-in;
+  opacity: 0.66;
+}
+
+.scaleonyaxis {
+  transition: all 0.3s ease-in;
+}
+
+.scaleonyaxis:hover {
+  transition: all 0.3s ease-in;
+  transform: scaleY(1.2);
+}
+
+.wtd-card:hover .slide-top {
+  -webkit-animation: slide-top 0.1s linear both;
+  animation: slide-top 0.1s linear both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1.2rem);
+    transform: translateY(-1.2rem);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1.2rem);
+    transform: translateY(-1.2rem);
+  }
+}
+
+.scaleonxaxis:hover {
+  transform: scaleX(1.5);
+  opacity: 1;
+}
+
+.indexer-text {
+  font-family: Noto Sans;
+  font-size: 1.25re;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.19375rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.iright-prolonged > i {
+  visibility: visible;
+}
+
+
+.iright-prolonged > img {
+  visibility: hidden;
+}
+
+.wtd-card:hover .iright-prolonged > img {
+  visibility: visible;
+}
+
+
+
+.wtd-card:hover .iright-prolonged > i {
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .text-container {
+    width: 100%;
+  }
+}
