@@ -14,7 +14,7 @@
 
 <body class="bg-gold overflow-auto">
 
-  <div class="container-fluid py-1 py-md-3 py-lg-5 bg-ice">
+  <div class="container-fluid py-1 py-md-3 py-lg-5 bg-cream">
     <div class="row mx-auto py-2 justify-content-center">
       <div class="col-12 px-0 px-md-2 py-1 py-md-3 title align-items-center text-gold fs-1 fw-bold text-gold">
         <div class="align-self-center justify-content-center  d-flex">What to do</div>
@@ -197,96 +197,20 @@
 
   <script type="text/javascript">
 
-    let populateTextswtd = {
-      populate: function () {
+    var carousel = document.getElementById('#wtdSlider')
+    let items = carousel.querySelectorAll(".carousel .carousel-item");
 
-        var btnText = "";
-        var btnTextGR = "Ανακαλύψτε";
-        var btnTextUS = "Discover";
-
-        var title = "";
-        var titleGr = "What to do";
-        var titleUS = "What to do";
-
-        const destinationsGr = ["Εκδηλώσεις", "Αρχαιολογικοί Χώροι & Μνημεία", "Γατρονομία", "Δραστηριότητες", "Μουσεία", "Θρησκευτικά Μνημεία"];
-        const destinationsUS = ["Events", "Archaelogical Sites & Monuments", "Gastronomy", "Outdor", "Museums", "Religious Monuments"];
-
-        if (window.location.href.indexOf("el-gr") > -1) {
-          title = titleGr;
-          btnText = btnTextGR;
-
-          destinationsGr.forEach(element => {
-            var indexI = destinationsGr.indexOf(element);
-            var ahrefindex = (indexI).toString();
-
-            var photoUrl = "/portals/0/Images/highlights/" + destinationsUS[destinationsGr.indexOf(element)].toString().replace(/\s/g, "-") + "-1.jpg"
-            var ctSelector = "." + "ct" + ahrefindex;
-            var selector = "." + "ahref" + ahrefindex;
-            var phSelector = "." + "ph" + ahrefindex;
-
-            var ph = document.querySelector(phSelector).src = photoUrl
-            var ct = document.querySelector(ctSelector).innerHTML = element;
-            var a = document.querySelector(selector).href = "/el-gr/" + destinationsUS[destinationsGr.indexOf(element)].toString().replace(/\s/g, "-");
-          });
-
-          ahref = "/el-gr/Discover";
+    items.forEach((el) => {
+      let next = el.nextElementSibling;
+      for (var i = 1; i < itemsCount; i++) {
+        if (!next) {
+          // wrap carousel by using first child
+          next = items[0];
         }
-        else {
-          title = titleUS;
-          destinationsUS.forEach(element => {
-            var indexI = destinationsUS.indexOf(element);
-            var ahrefindex = (indexI).toString();
-
-            var photoUrl = "/portals/0/Images/highlights/" + element.replace(/\s/g, "-") + "-1.jpg"
-            var ctSelector = "." + "ct" + ahrefindex;
-            var selector = "." + "ahref" + ahrefindex;
-            var phSelector = "." + "ph" + ahrefindex;
-
-            var ph = document.querySelector(phSelector).src = photoUrl;
-            var ct = document.querySelector(ctSelector).innerHTML = element;
-            var a = document.querySelector(selector).href = "/en-us/" + element.replace(/\s/g, "-");
-          });
-
-
-
-          btnText = btnTextUS;
-          ahref = "/en-us/Discover";
-        }
-        document.querySelector(".ahref-div").href = ahref;
-        document.querySelector(".discover").innerHTML = btnText;
-        document.querySelector(".title").innerHTML = title;
+        let cloneChild1 = next.cloneNode(true);
+        el.appendChild(cloneChild1.children[0]);
+        next = next.nextElementSibling;
       }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      new ExeoCarousel('wtdSlider', 5).Initialize();
-
-
-      // var ExeoCarousel = function (id, itemsCount) {
-
-      //   function init() {
-      //     var carousel = document.getElementById(id)
-      //     let items = carousel.querySelectorAll(".carousel .carousel-item");
-
-      //     items.forEach((el) => {
-
-      //       let next = el.nextElementSibling;
-      //       for (var i = 1; i < itemsCount; i++) {
-      //         if (!next) {
-      //           // wrap carousel by using first child
-      //           next = items[0];
-      //         }
-      //         let cloneChild1 = next.cloneNode(true);
-      //         el.appendChild(cloneChild1.children[0]);
-      //         next = next.nextElementSibling;
-      //       }
-      //     });
-      //   }
-      //   return {
-      //     Initialize: init
-      //   }
-      // }
-
     });
   </script>
 

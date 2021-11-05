@@ -27,30 +27,32 @@
           </div>
           <div class="my-auto w-auto h-auto d-flex  ps-0">
             <a href="" class="ahref-div my-4 my-md-0 d-flex align-items-center">
-              <div class="text-gold fw-bold text-start discover pe-2"></div><i class="d-flex align-self-center ps-2 fs-5 fw-bold bi text-gold bi-arrow-right"></i>
+              <div class="text-gold fw-bold text-start discover pe-2"></div><i
+                class="d-flex align-self-center ps-2 fs-5 fw-bold bi text-gold bi-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
 
-      let populateTexts = {
-        populate: function () {
+    let populateTexts = {
+      populate: function () {
 
-          var btnText = "";
-          var btnTextGR = "Ανακαλύψτε";
-          var btnTextUS = "Discover";
+        var btnText = "";
+        var btnTextGR = "Ανακαλύψτε";
+        var btnTextUS = "Discover";
 
-          var title = "";
-          var titleGr = "Σπάρτη, μια από τις ομορφότερες πόλεις της Ελλάδας !";
-          var titleUS = "Sparta, one of the most beautiful cities in Greece!";
+        var title = "";
+        var titleGr = "Σπάρτη, μια από τις ομορφότερες πόλεις της Ελλάδας !";
+        var titleUS = "Sparta, one of the most beautiful cities in Greece!";
 
-          var brLines = '<br><br>';
-          var mainText = "";
+        var brLines = '<br><br>';
+        var mainText = "";
 
-          var mainTextGR = ` Ένας τόπος που θα σας εκπλήξει ευχάριστα με τη ζωντανή ιστορία του, το επιβλητικό τοπίο και τους
+        var mainTextGR = ` Ένας τόπος που θα σας εκπλήξει ευχάριστα με τη ζωντανή ιστορία του, το επιβλητικό τοπίο και τους
             φιλόξενους
             ανθρώπους του!
             Ένας πολύπλευρος προορισμός, που προσφέρει υπέροχες διαδρομές, αξιοθέατα, πλούσιες εικόνες, γεύσεις και
@@ -59,11 +61,11 @@
             το
             μύθο και απολαύστε μοναδικές εμπειρίες σε ένα περιβάλλον απαράμιλλης φυσικής ομορφιάς.`
 
-            + brLines +
-            `Ανακαλύψτε την αληθινή Σπάρτη!`;
+          + brLines +
+          `Ανακαλύψτε την αληθινή Σπάρτη!`;
 
 
-          var mainTextUS = `A place that will pleasantly surprise you with its lively history, imposing landscape and theirs
+        var mainTextUS = `A place that will pleasantly surprise you with its lively history, imposing landscape and theirs
             hospitable
             his people!
             A versatile destination, offering great routes, attractions, rich images, and flavors
@@ -71,37 +73,37 @@
             The glorious past of the city is not the only reason to visit it! Discover the place beyond
             the
             legend and enjoy unique experiences in an environment of unparalleled natural beauty.`
-            + brLines +
-            `Discover the real Sparta!`;
+          + brLines +
+          `Discover the real Sparta!`;
 
-          if (window.location.href.indexOf("el-gr") > -1) {
-            title = titleGr;
-            btnText = btnTextGR;
-            mainText = mainTextGR;
-            ahref = "/el-gr/Discover";
-          }
-          else {
-            title = titleUS;
-            btnText = btnTextUS;
-            mainText = mainTextUS;
-            ahref = "/en-us/Discover";
-          }
-          document.querySelector(".ahref-div").href = ahref;
-          document.querySelector(".mainText").innerHTML = mainText;
-          document.querySelector(".discover").innerHTML = btnText;
-          document.querySelector(".title").innerHTML = title;
+        if (window.location.href.indexOf("el-gr") > -1) {
+          title = titleGr;
+          btnText = btnTextGR;
+          mainText = mainTextGR;
+          ahref = "/el-gr/Discover/Sparta";
         }
+        else {
+          title = titleUS;
+          btnText = btnTextUS;
+          mainText = mainTextUS;
+          ahref = "/en-us/Discover/Sparta";
+        }
+        document.querySelector(".ahref-div").href = ahref;
+        document.querySelector(".mainText").innerHTML = mainText;
+        document.querySelector(".discover").innerHTML = btnText;
+        document.querySelector(".title").innerHTML = title;
       }
+    }
 
 
 
-      document.addEventListener('DOMContentLoaded', (event) => {
-        populateTexts.populate();
-      });
+    document.addEventListener('DOMContentLoaded', (event) => {
+      populateTexts.populate();
+    });
 
-    </script>
+  </script>
 
-    <script src="/js/bootstrap.bundle.min.js" />
+  <script src="/js/bootstrap.bundle.min.js" />
 </body>
 
 </html>

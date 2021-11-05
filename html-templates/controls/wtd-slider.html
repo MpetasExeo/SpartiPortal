@@ -14,7 +14,7 @@
 
 <body class="bg-gold overflow-auto">
 
-  <div class="container-fluid py-1 py-md-3 py-lg-5 bg-ice">
+  <div class="container-fluid py-1 py-md-3 py-lg-5 bg-cream">
     <div class="row mx-auto py-2 justify-content-center">
       <div class="col-12 px-0 px-md-2 py-1 py-md-3 title align-items-center text-gold fs-1 fw-bold text-gold">
         <div class="align-self-center justify-content-center  d-flex">What to do</div>
@@ -259,35 +259,24 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      new ExeoCarousel('wtdSlider', 5).Initialize();
+      var carousel = document.getElementById('wtdSlider')
+      let items = carousel.querySelectorAll(".carousel .carousel-item");
+
+      items.forEach((el) => {
+        let next = el.nextElementSibling;
+        for (var i = 1; i < 4; i++) {
+          if (!next) {
+            // wrap carousel by using first child
+            next = items[0];
+          }
+          let cloneChild1 = next.cloneNode(true);
+          el.appendChild(cloneChild1.children[0]);
+          next = next.nextElementSibling;
+        }
+      });
+    })
 
 
-      // var ExeoCarousel = function (id, itemsCount) {
-
-      //   function init() {
-      //     var carousel = document.getElementById(id)
-      //     let items = carousel.querySelectorAll(".carousel .carousel-item");
-
-      //     items.forEach((el) => {
-
-      //       let next = el.nextElementSibling;
-      //       for (var i = 1; i < itemsCount; i++) {
-      //         if (!next) {
-      //           // wrap carousel by using first child
-      //           next = items[0];
-      //         }
-      //         let cloneChild1 = next.cloneNode(true);
-      //         el.appendChild(cloneChild1.children[0]);
-      //         next = next.nextElementSibling;
-      //       }
-      //     });
-      //   }
-      //   return {
-      //     Initialize: init
-      //   }
-      // }
-
-    });
   </script>
 
   <script src="/js/index.js"></script>
