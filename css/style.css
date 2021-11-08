@@ -206,7 +206,6 @@ main {
 }
 
 .places-first-paragraph {
-  font-family: Inter;
   margin-bottom: 4.1875rem;
   font-size: 1.375rem;
   font-style: normal;
@@ -216,9 +215,7 @@ main {
   text-align: left;
 }
 
-
-.places-third-paragraph{
-  font-family: Inter;
+.places-third-paragraph {
   margin-bottom: 4.1875rem;
   font-size: 1.25rem;
   font-style: normal;
@@ -235,7 +232,81 @@ main {
   min-height: 77vh;
   border: none;
   padding: 0;
+  max-height: auto !important;
   border-width: 0;
+}
+
+.menu-list-group {
+  padding: 2rem;
+  height: 100%;
+}
+
+.menu-list-group > a > h6 {
+  font-family: Noto Serif;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.0625rem;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.menu-list-group .list-group-item {
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0em;
+  text-align: left;
+  background: transparent;
+  color: white !important;
+  border: 0 !important;
+  text-align: start;
+}
+
+.menu-list-group .list-group-item > a {
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0em;
+  text-align: left;
+  background: transparent;
+  color: white !important;
+  border: 0 !important;
+  text-align: start;
+}
+
+.discover-tag-container {
+  height: 8rem;
+  width: auto;
+  position: relative;
+  margin-left: 4rem;
+  margin-top: 4rem;
+  background-color: #ede9df;
+}
+
+.discover-tag-container > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.menu-logo {
+  height: 8rem;
+  width: auto;
+  position: relative;
+  margin-left: 4rem;
+  margin-top: 4rem;
+}
+
+.menu-logo > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -271,6 +342,13 @@ main {
   height: 0.875rem;
   width: 100%;
   background-color: transparent;
+}
+
+.menu-tab-rectangle {
+  height: 0.175rem;
+  width: 80%;
+  justify-self: start;
+  background-color: white;
 }
 
 .active .tab-rectangle {
@@ -928,6 +1006,34 @@ font-family: 'Noto Serif', serif;
 
 .wtd-card:hover .iright-prolonged > i {
   visibility: hidden;
+}
+
+.navbar .megamenu {
+  padding: 1rem;
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .has-megamenu {
+    position: static !important;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 767px) {
