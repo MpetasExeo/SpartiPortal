@@ -280,19 +280,21 @@ main {
   text-align: start;
 }
 
-.discover-tag-container {
-  height: 8rem;
-  width: auto;
+.experiences-tag-container {
+  height: 10.875rem;
+  width: 12rem;
   position: relative;
-  margin-left: 4rem;
-  margin-top: 4rem;
-  background-color: #ede9df;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: #ede9df; */
+  background-image: url("/portals/0/Images/various/tag-container.png");
 }
 
-.discover-tag-container > img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+.experiences-tag-container > img {
+  object-fit: contain;
+  height: 5rem;
+  width: 5rem;
 }
 
 .menu-logo {
