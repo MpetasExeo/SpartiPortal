@@ -331,19 +331,21 @@ main {
   justify-content: center;
 }
 
-.tag-card .card-img-top {
+/* .tag-card .card-img-top-container {
   height: 10.875rem;
   width: 12rem;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("/portals/0/Images/various/tag-container.png");
+   background-image: url("/portals/0/Images/various/tag-container.png");
+} */
+
+.tag-card .card-img-top {
+  height: 10.875rem;
+  width: 12rem;
+  object-fit: contain;
 }
 
-.tag-card .card-img-top > img {
-  width: 5rem;
-  height: 5rem;
-}
 
 .tag-text {
   font-family: "Noto Sans", sans-serif;
@@ -1104,13 +1106,13 @@ font-family: 'Noto Serif', serif;
     width: 100%;
   }
 
-  /* .carousel-inner .carousel-item > div {
+   .carousel-inner .carousel-item > div {
     display: none;
   }
   
   .carousel-inner .carousel-item > div:first-child {
     display: block;
-  }  */
+  }  
 
   .places-secondary-paragraph {
     position: relative;

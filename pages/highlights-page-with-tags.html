@@ -52,80 +52,6 @@
       </div> -->
 
       <div class="flex-column flex-md-row  w-100 d-flex justify-content-center">
-        <!-- <div id="buttonsContainer" class="row w-100">
-
-          <div
-            class="col-12 col-md-12  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column" onclick="filterSelection('all')">
-              <div class="experiences-tag-container d-flex p-0 justify-content-center flex-column align-items-center">
-                <img src="/portals/0/Images/various/todo1.png" class="d-block img-fluid " alt="">
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">All</h6>
-            </button>
-          </div>
-
-          <div
-            class="col-4 col-md-2  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column" onclick="filterSelection('events')">
-              <div class="experiences-tag-container d-flex justify-content-center flex-column  align-items-center">
-                <img src="/portals/0/Images/various/todo2.png" class="d-block img-fluid" alt="">
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">Events</h6>
-            </button>
-          </div>
-          <div
-            class="col-4 col-md-2  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column d-flex align-content-center"
-              onclick="filterSelection('museums')">
-              <div class="experiences-tag-container d-flex justify-content-center flex-column  align-items-center">
-                <img src="/portals/0/Images/various/todo3.png" class="d-block img-fluid" alt="">
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">Museums</h6>
-            </button>
-          </div>
-          <div
-            class="col-4 col-md-2  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column" onclick="filterSelection('archaelogical')">
-              <div class="experiences-tag-container d-flex justify-content-center flex-column  align-items-center">
-                <img src="/portals/0/Images/various/todo4.png" class="d-block img-fluid" alt="">
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">Monuments</h6>
-            </button>
-
-          </div>
-          <div
-            class="col-4 col-md-2  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column" onclick="filterSelection('outdoor')">
-              <div class="experiences-tag-container d-flex justify-content-center flex-column  align-items-center">
-                <img src="/portals/0/Images/various/todo5.png" class="d-block img-fluid" alt="">
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">Outdoor</h6>
-            </button>
-          </div>
-          <div
-            class="col-4 col-md-2  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column" onclick="filterSelection('religious')">
-              <div class="experiences-tag-container d-flex justify-content-center flex-column  align-items-center">
-                <img src="/portals/0/Images/various/todo6.png" class="d-block img-fluid" alt="">
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">Religious Sites
-              </h6>
-            </button>
-          </div>
-
-
-          <div
-            class="col-4 col-md-2  py-1 py-md-2 titleHighlights d-flex justify-content-center align-content-center text-gold fs-1 fw-bold text-gold">
-            <button class="border-0 tagBtn p-0 active flex-column active" onclick="filterSelection('all')">
-              <div class="experiences-tag-container d-flex justify-content-center flex-column  align-items-center">
-                <img src="/portals/0/Images/various/todo1.png" class="d-block img-fluid" alt="">
-
-              </div>
-              <h6 class="text-dark-blue w-100 text-center tag-text">Gastronomy</h6>
-            </button>
-          </div>
-        </div> -->
-
         <div class="row mx-auto py-2 justify-content-center">
           <div class="col-12 px-0 px-md-2 py-1 py-md-3 title align-items-center text-gold fs-1 fw-bold text-gold">
             <div class="align-self-center justify-content-center  d-flex">Experiences</div>
@@ -145,15 +71,14 @@
 
           <div id="tagSlider" class="carousel p-0 py-1 py-md-2 py-lg-3" data-bs-ride="carousel slide">
             <div class="carousel-inner p-0 py-md-2" id="buttonsContainer" role="listbox">
-              
+
               <div class="carousel-item active">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('all')">
+                  <button class="border-0 tagBtn tagbtnClicked all p-0 active bg-transparent flex-column"
+                    onmouseout="tagButtonMouseOut(this)" onmouseover="tagButtonHover(this)"
+                    onclick="filterSelectionClick(this,'all')">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo1.png" alt="">
-                      </div>
+                      <img src="/portals/0/Images/various/all_h.png" class="card-img-top" alt="">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">All</h5>
                       </div>
@@ -164,12 +89,11 @@
 
               <div class="carousel-item">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('events')">
+                  <button class="border-0 tagBtn tagbtnClicked p-0 active bg-transparent flex-column"
+                    onmouseout="tagButtonMouseOut(this)" onmouseover="tagButtonHover(this)"
+                    onclick="filterSelectionClick(this,'events')">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo2.png" alt="">
-                      </div>
+                      <img class="card-img-top" src="/portals/0/Images/various/Events.png" alt="">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">Events</h5>
                       </div>
@@ -180,12 +104,13 @@
 
               <div class="carousel-item">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('museums')">
+                  <button class="border-0 tagBtn tagbtnClicked p-0 active bg-transparent flex-column"
+                    onclick="filterSelectionClick(this,'museums')" onmouseout="tagButtonMouseOut(this)"
+                    onmouseover="tagButtonHover(this)">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo3.png" alt="">
-                      </div>
+
+                      <img class="card-img-top" src="/portals/0/Images/various/Museums.png" alt="">
+
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">Museums</h5>
                       </div>
@@ -198,12 +123,13 @@
               <div class="carousel-item">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
 
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('archaelogical')">
+                  <button class="border-0 tagBtn tagbtnClicked p-0 active bg-transparent flex-column"
+                    onclick="filterSelectionClick(this,'archaelogical')" onmouseout="tagButtonMouseOut(this)"
+                    onmouseover="tagButtonHover(this)">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo4.png" alt="">
-                      </div>
+
+                      <img class="card-img-top" src="/portals/0/Images/various/archeo.png" alt="">
+
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">Monuments</h5>
                       </div>
@@ -216,12 +142,13 @@
               <div class="carousel-item">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
 
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('religious')">
+                  <button class="border-0 tagBtn tagbtnClicked p-0 active bg-transparent flex-column"
+                    onclick="filterSelectionClick(this,'religious')" onmouseout="tagButtonMouseOut(this)"
+                    onmouseover="tagButtonHover(this)">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo5.png" alt="">
-                      </div>
+
+                      <img class="card-img-top" src="/portals/0/Images/various/religious.png" alt="">
+
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">Religious sites</h5>
                       </div>
@@ -232,12 +159,13 @@
 
               <div class="carousel-item">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('outdoor')">
+                  <button class="border-0 tagBtn tagbtnClicked p-0 active bg-transparent flex-column"
+                    onclick="filterSelectionClick(this,'outdoor')" onmouseout="tagButtonMouseOut(this)"
+                    onmouseover="tagButtonHover(this)">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo6.png" alt="">
-                      </div>
+
+                      <img class="card-img-top" src="/portals/0/Images/various/Outdoor.png" alt="">
+
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">Outdoor</h5>
                       </div>
@@ -249,12 +177,11 @@
 
               <div class="carousel-item">
                 <div class="col-md-2 px-1 px-lg-2 py-1 py-lg-2">
-                  <button class="border-0 tagBtn p-0 active bg-transparent flex-column"
-                    onclick="filterSelection('gastronomy')">
+                  <button class="border-0 tagBtn tagbtnClicked p-0 active bg-transparent flex-column"
+                    onclick="filterSelectionClick(this,'gastronomy')" onmouseout="tagButtonMouseOut(this)"
+                    onmouseover="tagButtonHover(this)">
                     <div class="card tag-card border-0 text-gold bg-transparent">
-                      <div class="card-img-top d-flex justify-content-center align-items-center" alt="...">
-                        <img src="/portals/0/Images/various/todo7.png" alt="">
-                      </div>
+                      <img class="card-img-top" src="/portals/0/Images/various/gastronomy.png" alt="">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title tag-text slide-top text-dark-blue wtdct1">Gastronomy</h5>
                       </div>
@@ -617,6 +544,38 @@
 
     filterSelection("all");
 
+    function filterSelectionClick(e, c) {
+      // var x, i;
+      // x = document.getElementsByClassName("filterDiv");
+      // if (c == "all") c = "";
+      // // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+      // for (i = 0; i < x.length; i++) {
+      //   removeClass(x[i], "show");
+      //   if (x[i].className.indexOf(c) > -1) {
+      //     addClass(x[i], "show");
+      //   }
+      // }
+
+      filterSelection(c);
+      if (!e.classList.contains(".clicked")) {
+        var x, i;
+
+        var prevClicked = document.querySelector(".clicked");
+        prevClicked.classList.remove("clicked");
+
+        {
+          ImgSrc = prevClicked.querySelector(".card-img-top").src;
+          if (ImgSrc.includes("_h.png")) {
+            var length = ImgSrc.length - 6;
+            var newSrc = ImgSrc.substring(ImgSrc, length) + ".png";            
+            prevClicked.querySelector(".card-img-top").src = newSrc;
+          }
+        }
+
+        e.classList.add("clicked");
+      }
+    }
+
 
     function filterSelection(c) {
       var x, i;
@@ -670,6 +629,33 @@
   </script>
 
   <script type="text/javascript">
+
+
+    function tagButtonHover(e) {
+
+      let currentImgSrc = e.querySelector(".card-img-top").src;
+      let length = currentImgSrc.length - 4;
+
+
+      if (!e.classList.contains("clicked")) {
+        var newSrc = currentImgSrc.substring(currentImgSrc, length)
+        e.querySelector(".card-img-top").src = newSrc + "_h.png";
+      }
+    }
+
+    function tagButtonMouseOut(e) {
+
+      let currentImgSrc = e.querySelector(".card-img-top").src;
+      let length = currentImgSrc.length - 6;
+
+      if (!e.classList.contains("clicked")) {
+        var newSrc = currentImgSrc.substring(currentImgSrc, length)
+        e.querySelector(".card-img-top").src = newSrc + ".png";
+      }
+
+
+
+    }
 
     // let populateTextsHighlights2 = {
     //   populate: function () {
@@ -742,6 +728,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       var carousel = document.getElementById('tagSlider')
       let items = carousel.querySelectorAll(".carousel .carousel-item");
+      document.querySelector(".all").classList.add("clicked");
 
       items.forEach((el) => {
         let next = el.nextElementSibling;
