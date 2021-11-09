@@ -21,15 +21,26 @@ form {
   min-height: 100vh;
   flex-direction: column;
 }
-header {
+/* header {
   height: 30vh;
-}
+  background-color: transparent;
+} */
 
 main {
   flex-grow: 1;
 }
 
-.nav-link {
+
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.autohide:hover .nav-link {
   font-family: Noto Sans;
   font-size: 1rem;
   font-style: normal;
@@ -40,24 +51,29 @@ main {
   color: #125564 !important;
 }
 
+
+.nav-link {
+  font-family: Noto Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.375rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white !important;
+  /* border-bottom: 4px #125564 solid; */
+}
+
 .autohide {
   padding: 0;
   margin: 0;
-  background: linear-gradient(
-    180deg,
-    #12556490 0%,
-    rgba(196, 196, 196, 0) 96.35%
-  );
+  background-color: #ffffff;
+  background:  linear-gradient(180deg, #000000af 0%, rgba(196, 196, 196, 0) 96.35%);
   /* z-index: 50; */
 }
 
 .autohide::after {
   transition: all 0.25s ease-in-out;
-}
-
-.autohide:hover {
-  background: #ffffff;
-  background-color: #ffffff;
 }
 
 .weather-card {
@@ -369,10 +385,11 @@ main {
   border: none;
   border-width: 0;
 }
-
+/* 
 .navbar {
-  background-color: #ffffff;
-}
+  color;
+} */
+
 
 .navbar .nav-hero {
   z-index: 0;
@@ -880,6 +897,8 @@ font-family: 'Noto Serif', serif;
   text-align: left;
   margin-bottom: 3.0625rem;
 }
+
+
 
 .ycmCarousel .carousel-item-next.carousel-item-left,
 .carousel-item-prev.carousel-item-right {
