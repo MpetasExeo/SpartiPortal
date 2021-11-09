@@ -557,7 +557,10 @@
       // }
 
       filterSelection(c);
-      if (!e.classList.contains(".clicked")) {
+
+      var isClicked = (e.classList.contains("clicked"));
+
+      if (!isClicked) {
         var x, i;
 
         var prevClicked = document.querySelector(".clicked");
