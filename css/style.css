@@ -757,7 +757,7 @@ font-family: 'Noto Serif', serif;
 .home-hero {
   width: 100%;
   /* height: 80vh !important; */
-  height: 95vh !important;
+  height: 100vh !important;
   background: url("/portals/0/Images/heros/winter.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -800,7 +800,7 @@ font-family: 'Noto Serif', serif;
 
 .home-hero-1 {
   width: 100%;
-  height: 95vh !important;
+  height: 100vh !important;
   background: url("/portals/0/Images/heros/spring.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -809,7 +809,7 @@ font-family: 'Noto Serif', serif;
 }
 .home-hero-2 {
   width: 100%;
-  height: 95vh !important;
+  height: 100vh !important;
   background: url("/portals/0/Images/heros/summer.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -818,7 +818,7 @@ font-family: 'Noto Serif', serif;
 }
 .home-hero-3 {
   width: 100%;
-  height: 95vh !important;
+  height: 100vh !important;
    background: url("/portals/0/Images/heros/fall.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -827,7 +827,7 @@ font-family: 'Noto Serif', serif;
 }
 .home-hero-4 {
   width: 100%;
-  height: 95vh !important;
+  height: 100vh !important;
    background: url("/portals/0/Images/heros/5.jpg");
   background-repeat: no-repeat;
   background-position: center center;
