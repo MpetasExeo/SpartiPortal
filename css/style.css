@@ -30,6 +30,33 @@ main {
   flex-grow: 1;
 }
 
+.col-megamenu .menu-side-photo {
+  height: 100%;
+  width: 100%;
+}
+
+.col-megamenu .menu-separator {
+  height: 100%;
+  width: auto;
+  position: relative;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+.col-megamenu .menu-side-photo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.col-megamenu .menu-separator > img {
+  height: 100%;
+  width: auto;
+  z-index: 1;
+  object-fit: contain;
+}
+
 .scrolled-down {
   transform: translateY(-100%);
   transition: all 0.3s ease-in-out;
@@ -40,36 +67,32 @@ main {
 }
 
 .autohide:hover .nav-link {
-  font-family: Noto Sans;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.375rem;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #125564 !important;
+  color: #f5f3f0 !important;
+}
+
+.autohide:hover {
+  background: linear-gradient(180deg, #125564eb 0.1%, #125564ee 100%);
 }
 
 .nav-link {
   font-family: Noto Sans;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.375rem;
   letter-spacing: 0em;
   text-align: left;
-  color: white !important;
+  color: #f5f3f0 !important;
   /* border-bottom: 4px #125564 solid; */
 }
 
 .autohide {
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
   background: linear-gradient(
     180deg,
-    #000000af 0%,
-    rgba(196, 196, 196, 0) 96.35%
+    #0000006a 0%,
+    rgba(60, 60, 60, 0.167) 96.35%
   );
   /* z-index: 50; */
 }
@@ -255,11 +278,6 @@ main {
   border-width: 0;
 }
 
-.menu-list-group {
-  padding: 2rem;
-  /* height: 100%; */
-}
-
 .menu-list-group > a > h6 {
   font-family: Noto Serif;
   font-size: 2.25rem;
@@ -383,13 +401,23 @@ main {
   width: 100%;
 }
 
+.menu-link {
+  font-family: Noto Sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.375rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .col-megamenu * {
   text-decoration: none !important;
 }
 
-.col-megamenu > a .title {
+.col-megamenu .nodes-container > a * {
   font-family: Noto Serif;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: 3.0625rem;
@@ -398,13 +426,79 @@ main {
   text-decoration: underline;
 }
 
+.col-megamenu .nodes-container > a .title > i {
+  display: none ;
+}
+
+.col-megamenu .nodes-container > a .title:hover > i {
+  display: inline-block ;
+}
+/* 
+.col-megamenu .nodes-container > a :hover > i {
+  display: inline-flex;
+  align-self: center;
+} */
+
+.col-megamenu .nodes-container > ul > li > a {
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0em;
+  text-align: left;
+  background: transparent;
+  color: white !important;
+  border: 0 !important;
+  text-align: start;
+}
+
+.col-megamenu .nodes-container > ul > li > a:hover {
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0em;
+  text-align: left;
+  background: transparent;
+  color: #8e815e !important;
+  border: 0 !important;
+  text-align: start;
+}
+
+.menu-side {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-item .dropdown .has-megamenu::marker {
+  display: none !important;
+}
+
+li {
+  list-style:none !important;
+  background-image:none;
+  background-repeat:none;
+  background-position:0; 
+}
+
 .dropdown-menu {
+  width: 100vw;
   background: linear-gradient(180deg, #125564ee 0.1%, #125564eb 100%),
     url("/portals/0/Images/heros/home-hero.png");
-  background-repeat: no-repeat;
+  height: 77vh;
+  border: none;
+  padding: 0;
+  border-width: 0;
   background-position: center center;
   background-size: cover;
-  /* z-index: 50; */
+  background-repeat: no-repeat;
+  border-radius: 0px !important;
+}
+
+.col-megamenu {
+  height: 50vh !important;
 }
 
 /* 
@@ -442,7 +536,7 @@ main {
   height: 0.175rem;
   width: 80%;
   justify-self: start;
-  background-color: white;
+  background-color: #8e815e;
 }
 
 .active .tab-rectangle {
@@ -663,7 +757,7 @@ font-family: 'Noto Serif', serif;
 .home-hero {
   width: 100%;
   /* height: 80vh !important; */
-  height: 80vh !important;
+  height: 95vh !important;
   background: url("/portals/0/Images/heros/winter.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -706,7 +800,7 @@ font-family: 'Noto Serif', serif;
 
 .home-hero-1 {
   width: 100%;
-  height: 80vh !important;
+  height: 95vh !important;
   background: url("/portals/0/Images/heros/spring.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -715,7 +809,7 @@ font-family: 'Noto Serif', serif;
 }
 .home-hero-2 {
   width: 100%;
-  height: 80vh !important;
+  height: 95vh !important;
   background: url("/portals/0/Images/heros/summer.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -724,8 +818,8 @@ font-family: 'Noto Serif', serif;
 }
 .home-hero-3 {
   width: 100%;
-  height: 80vh !important;
-  background: url("/portals/0/Images/heros/fall.jpg");
+  height: 95vh !important;
+   background: url("/portals/0/Images/heros/fall.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -733,16 +827,16 @@ font-family: 'Noto Serif', serif;
 }
 .home-hero-4 {
   width: 100%;
-  height: 80vh !important;
-  background: url("/portals/0/Images/heros/5.jpg");
+  height: 95vh !important;
+   background: url("/portals/0/Images/heros/5.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
 }
 .discover-card {
-  max-width: 32.0625rem;
-  max-height: 27.875rem;
+  width: 32.0625rem;
+  height: 27.875rem;
   border-width: 0;
   border-radius: 0rem !important;
   overflow: hidden;
@@ -1135,12 +1229,28 @@ font-family: 'Noto Serif', serif;
     width: 100%;
   }
 
+
+  .col-megamenu .nodes-container > a .title > i {
+    display: inline-block ;
+  }
+
+  .md-full {
+    width: 100%;
+  }
+
   .carousel-inner .carousel-item > div {
     display: none;
   }
 
   .carousel-inner .carousel-item > div:first-child {
     display: block;
+  }
+
+  .autohide {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, #125564 0%, #125564eb 96.35%);
+    /* z-index: 50; */
   }
 
   .places-secondary-paragraph {
@@ -1197,6 +1307,22 @@ font-family: 'Noto Serif', serif;
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .col-megamenu {
+    height: 50vh !important;
+  }
+
+  .col-megamenu .menu-separator {
+    height: 100%;
+    width: auto;
+    position: relative;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+
+  .col-megamenu .menu-side-photo {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
