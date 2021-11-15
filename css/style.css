@@ -30,6 +30,111 @@ main {
   flex-grow: 1;
 }
 
+.social-media-footer-icons *{
+
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media-footer-icons:hover {
+  background-color: #8e815e;
+}
+
+.social-media-footer-icons:hover >i {
+  color: white;
+  
+}
+
+
+
+.legal-footer * {
+  font-family: Inter;
+  font-size: 0.875;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #125564;
+}
+
+.footer-section-title {
+  font-family: Noto Serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5625rem;
+  letter-spacing: 0em;
+  text-align: left;
+  overflow: hidden;
+}
+
+.ahref-div > section * {
+color: white;
+}
+
+.footer-grid {
+  position: absolute;
+  top: -12.25rem;
+  right: -16rem;
+  width: 39.3125rem;
+  height: 26.625rem;
+  background-image: url("/portals/0/Images/various/grid.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+ul > li > a:visited {
+  color: white;
+}
+
+.footer-sparta-logo {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+footer {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  position: relative;
+}
+
+footer .footer-grid{
+  overflow-x: hidden;
+  overflow-y: visible !important;
+}
+
+/* .footer-grid > img {
+  max-width: 100%;
+  max-width: 100%;
+} */
+
+footer * > ul > li > a {
+  color: white;
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.3rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+footer * > ul > li > a >section * {
+  color: white;
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.3rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
 .what-to-do-hero {
   width: 100%;
@@ -481,6 +586,20 @@ main {
   color: #8e815e !important;
   border: 0 !important;
   text-align: start;
+}
+
+.langs-menu {
+  height: auto! important;
+}
+
+.langs-menu > li > a {
+  color: white;
+  font-size: 1.125rem;
+  padding: 0.25rem 0rem 0.25rem 0rem;
+}
+
+.skyscanner * > a{
+  color: #8e815e;
 }
 
 .menu-side {
@@ -1248,6 +1367,46 @@ font-family: 'Noto Serif', serif;
 @media (max-width: 767px) {
   .text-container {
     width: 100%;
+  }
+
+  .footer-grid {
+   width: 0;
+  height: 0;
+}
+
+  .footer-sparta-logo {
+    position: relative;
+    margin: 2rem auto 2rem auto;
+  }
+
+  .home-hero {
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .home-hero-1 {
+    height: auto;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .home-hero-2 {
+    height: auto;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .home-hero-3 {
+    height: auto;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .home-hero-4 {
+    height: auto;
+    background-size: contain;
+    background-attachment: fixed;
   }
 
   .dropdown-menu {
