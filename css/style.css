@@ -1378,20 +1378,20 @@ font-family: 'Noto Serif', serif;
     position: relative;
     margin: 2rem auto 2rem auto;
   }
-
+/* 
   .home-hero {
     height: auto;
     background-size: cover;
     background-attachment: fixed;
-  }
+  } */
 
-  .home-hero-1 {
+  /* .home-hero-1 {
     height: auto;
     background-size: contain;
     background-attachment: fixed;
-  }
+  } */
 
-  .home-hero-2 {
+  /* .home-hero-2 {
     height: auto;
     background-size: contain;
     background-attachment: fixed;
@@ -1407,7 +1407,7 @@ font-family: 'Noto Serif', serif;
     height: auto;
     background-size: contain;
     background-attachment: fixed;
-  }
+  } */
 
   .dropdown-menu {
     max-height: auto !important;
