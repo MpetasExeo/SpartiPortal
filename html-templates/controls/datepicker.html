@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.sparti.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src='bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+
+  <!-- Datepicker -->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'
+    rel='stylesheet' type='text/css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'
+    type='text/javascript'></script>
+
+
+
+</head>
+
+<body class="overflow-auto">
+
+  <div id='datepicker' class="datepicker d-inline w-100 bg-cream-dark text-dark-blue fs-3">
+  </div>
+
+  <button class="btn btn-primary" onclick="getDate()">Get date</button>
+
+
+  <a href="" data-date="22/11/2021" class="events d-none text-decoration-none wtdhref0">
+    <div class="card wtd-card border-0 shadow-lg text-gold">
+      <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid slide-top" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title slide-top text-dark-blue wtdct1"></h5>
+        <div class="mt-auto mb-1">
+          <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+            <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+            <div class="iright-prolonged fw-bolder p-0">
+              <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+              <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </a>
+
+  <!-- Script -->
+  <script type="text/javascript">
+    $('.datepicker').datepicker({
+      format: "dd/mm/yyyy",
+      maxViewMode: 2,
+      language: "el",
+      todayHighlight: true,
+      templates: {
+        leftArrow: '<i class="bi bi-arrow-left text-gold fs-2 fw-bold"></i>',
+        rightArrow: '<i class="bi bi-arrow-right text-gold fs-2 fw-bold"></i>'
+      }
+    });
+
+    function getDate() {
+      let datepicker = document.getElementById('datepicker')
+
+      let selectedDate = $('.datepicker').data('datepicker').getFormattedDate('dd/mm/yyyy');
+
+      var events = document.querySelectorAll(".events");
+
+      events.forEach(element => {
+
+        eventDate = element.getAttribute('data-date');
+
+        if ( eventDate == selectedDate )
+        {
+          if (element.classList.contains('d-none')){
+            element.classList.remove("d-none");
+          }
+
+        } 
+        
+      });
+
+    }
+
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- Script -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#datepicker').datepicker();
+  });
+</script>
+
+
+</script>
+
+<script src="/js/bootstrap.bundle.min.js" />

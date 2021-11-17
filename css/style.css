@@ -30,8 +30,7 @@ main {
   flex-grow: 1;
 }
 
-.social-media-footer-icons *{
-
+.social-media-footer-icons * {
   transition: all 0.3s ease-in-out;
 }
 
@@ -39,12 +38,9 @@ main {
   background-color: #8e815e;
 }
 
-.social-media-footer-icons:hover >i {
+.social-media-footer-icons:hover > i {
   color: white;
-  
 }
-
-
 
 .legal-footer * {
   font-family: Inter;
@@ -69,7 +65,7 @@ main {
 }
 
 .ahref-div > section * {
-color: white;
+  color: white;
 }
 
 .footer-grid {
@@ -83,7 +79,6 @@ color: white;
   background-position: center center;
   background-size: cover;
 }
-
 
 ul > li > a:visited {
   color: white;
@@ -101,7 +96,7 @@ footer {
   position: relative;
 }
 
-footer .footer-grid{
+footer .footer-grid {
   overflow-x: hidden;
   overflow-y: visible !important;
 }
@@ -123,8 +118,7 @@ footer * > ul > li > a {
   text-align: left;
 }
 
-
-footer * > ul > li > a >section * {
+footer * > ul > li > a > section * {
   color: white;
   text-decoration: none;
   font-family: Inter;
@@ -589,7 +583,7 @@ footer * > ul > li > a >section * {
 }
 
 .langs-menu {
-  height: auto! important;
+  height: auto !important;
 }
 
 .langs-menu > li > a {
@@ -598,7 +592,7 @@ footer * > ul > li > a >section * {
   padding: 0.25rem 0rem 0.25rem 0rem;
 }
 
-.skyscanner * > a{
+.skyscanner * > a {
   color: #8e815e;
 }
 
@@ -630,6 +624,43 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0px !important;
+}
+
+.dropdownText {
+  font-family: Noto Serif !important;
+  font-size: 1.25rem !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 1.75rem !important;
+  letter-spacing: 0em !important;
+  text-align: left !important;
+}
+
+.dropdown-little {
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.little-dropdown {
+  background: #f5f3ed !important;
+  width: 100% !important;
+  height: auto !important;
+  border: none;
+  padding: 0;
+  border-width: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px !important;
+  font-family: Noto Serif !important;
+  font-size: 1.125rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 1.5rem !important;
+  letter-spacing: 0em !important;
+  text-align: left !important;
+  padding: 0.25rem;
 }
 
 .col-megamenu {
@@ -900,6 +931,125 @@ font-family: 'Noto Serif', serif;
   background-attachment: fixed;
 }
 
+.close-menu-btn:hover {
+  cursor: pointer;
+  color: #ede9df;
+}
+.close-menu-btn {
+  cursor: pointer;
+  color: #bbb7ad;
+}
+
+.datepicker-inline {
+  width: 100% !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+  vertical-align: 0.255em;
+  margin-left: auto !important;
+  position: relative;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/* .datepicker-days{
+
+} */
+
+.datepicker-days .table-condensed {
+  width: 100% !important;
+}
+
+.datepicker-years .table-condensed {
+  width: 100% !important;
+}
+
+.datepicker-months .table-condensed {
+  width: 100% !important;
+}
+
+/* .datepicker-days .table-condensed > tbody > tr .active {
+background-color: #125564 !important;
+
+} */
+
+.datepicker table tr td.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active:hover {
+  /* background-color: #006dcc; */
+  background-image: -moz-linear-gradient(
+    to bottom,
+    #bbb7ad,
+    #bbb7ad
+  ) !important;
+  background-image: -ms-linear-gradient(to bottom, #bbb7ad, #bbb7ad) !important;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#bbb7ad),
+    to(#bbb7ad)
+  ) !important;
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    #bbb7ad,
+    #bbb7ad
+  ) !important;
+  background-image: -o-linear-gradient(to bottom, #bbb7ad, #bbb7ad);
+  /* background-image: linear-gradient(to bottom,#bbb7ad,#bbb7ad); */
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb7ad', endColorstr='#0044cc', GradientType=0);
+  border-color: #bbb7ad #bbb7ad #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);
+}
+
+.datepicker table tr td.today,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today:hover {
+  /* background-color: #006dcc; */
+  color: #8e815e !important;
+  background-image: -moz-linear-gradient(
+    to bottom,
+    #ede9df,
+    #ede9df
+  ) !important;
+  background-image: -ms-linear-gradient(to bottom, #ede9df, #ede9df) !important;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#ede9df),
+    to(#ede9df)
+  ) !important;
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    #ede9df,
+    #ede9df
+  ) !important;
+  background-image: -o-linear-gradient(to bottom, #ede9df, #ede9df);
+  /* background-image: linear-gradient(to bottom,#EDE9DF,#EDE9DF); */
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EDE9DF', endColorstr='#0044cc', GradientType=0);
+  border-color: #ede9df #ede9df #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);
+}
+
+.day .active {
+  background-color: #44a6bb;
+}
+
 .vector-grid-container {
   position: relative;
   margin-top: -14%;
@@ -915,6 +1065,37 @@ font-family: 'Noto Serif', serif;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.left-grid-container {
+  position: absolute;
+  left: -33%;
+  top: -10%;
+}
+
+.datepicker .datepicker-switch:hover,
+.datepicker .next:hover,
+.datepicker .prev:hover,
+.datepicker tfoot tr th:hover {
+  background-color: #ede9df !important;
+}
+
+/* 
+.events-hide{
+  display: none;
+}
+
+.events-show{
+  display: block;
+} */
+
+.datepicker table tr td.day.focused, .datepicker table tr td.day:hover{
+  background-color: #f0eadc !important;
+}
+
+.left-grid-container > img {
+  max-width: 100%;
+  height: auto;
 }
 
 .mystras-hero {
@@ -1031,7 +1212,7 @@ font-family: 'Noto Serif', serif;
 }
 
 .discover-card .moreBtn:hover {
-  background-color: #44bba6 !important  ;
+  background-color: #bbb7ad !important  ;
 }
 
 .discover-card:hover .moreBtn {
@@ -1055,7 +1236,14 @@ font-family: 'Noto Serif', serif;
   height: 36.75rem;
   width: 24rem;
   border-radius: 0ch;
-  overflow: visible;
+  overflow-y: visible;
+}
+
+.wtd-card {
+  height: 36.75rem;
+  max-width: 24rem;
+  border-radius: 0ch;
+  overflow-y: visible;
 }
 
 .wtd-card .card-title {
@@ -1215,7 +1403,7 @@ font-family: 'Noto Serif', serif;
 }
 
 .carousel-buttons:hover {
-  background-color: #44bba6 !important;
+  background-color: #bbb7ad !important;
 }
 
 .btn-text {
@@ -1370,15 +1558,15 @@ font-family: 'Noto Serif', serif;
   }
 
   .footer-grid {
-   width: 0;
-  height: 0;
-}
+    width: 0;
+    height: 0;
+  }
 
   .footer-sparta-logo {
     position: relative;
     margin: 2rem auto 2rem auto;
   }
-/* 
+  /* 
   .home-hero {
     height: auto;
     background-size: cover;

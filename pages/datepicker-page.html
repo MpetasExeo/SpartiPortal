@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.sparti.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src='bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+
+  <!-- Datepicker -->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'
+    rel='stylesheet' type='text/css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'
+    type='text/javascript'></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src='bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+
+  <!-- Datepicker -->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'
+    rel='stylesheet' type='text/css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js'
+    type='text/javascript'></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body class="overflow-auto">
+
+
+  <div class="mystras-hero">
+    <div class="d-flex text-break text-wrap box flex-column justify-content-center p-0 m-0 h-100 align-items-center">
+      <div class="row w-100 accordion-body justify-content-center align-items-center align-items-center">
+
+        <div class="col-12 main-title d-flex text-white justify-content-center text-center align-self-center">
+          Events
+        </div>
+
+        <div
+          class="col-12 col-md-6 text-center main-subtitle d-flex text-white justify-content-center align-items-center align-self-center">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="container-fluid d-lg-flex align-items-end flex-column py-1 py-md-3 py-lg-5 bg-cream position-relative">
+
+    <div
+      class="col-12 py-1 py-md-3 py-lg-5 flex-column-reverse flex-lg-row d-flex justify-content-center align-content-center text-gold fw-bold text-gold position-relative">
+    </div>
+
+
+    <div
+      class="col-12 col-lg-11 py-1 py-md-3 py-lg-5 flex-column-reverse flex-lg-row d-flex justify-content-center align-content-center text-gold fw-bold text-gold position-relative">
+
+      <div class="left-grid-container d-none d-lg-block">
+        <img class="img-fluid d-block" src="/portals/0/Images/various/grid.png" alt="">
+      </div>
+
+      <div class="col-md-8 flex-column col-12 d-flex px-0 px-md-4 justify-content-between align-items-between">
+
+        <div class="row w-100 d-flex align-items-end justify-content-start align-self-start">
+
+          <div
+            class="col-12 d-flex justify-content-center justify-content-md-start py-2 py-lg-0 text-dark-blue fs-1 fw-bold">
+            Calendar
+          </div>
+        </div>
+
+        <div class="row w-100  d-flex align-items-end justify-content-start align-self-end p-0 m-0">
+          <div
+            class="col-lg-5 p-0 m-0 py-3 py-lg-0 col-12 d-flex justify-content-center justify-content-lg-start align-items-end">
+            <div
+              class="dropdown text-dark-blue bg-cream border-bottom border-2 border-dark-blue w-75 d-flex justify-content-center align-items-center">
+
+              <button
+                class="btn dropdownText dropdown-when text-dark-blue w-100 text-start bg-transparent p-0 m-0 dropdown-toggle justify-content-between d-flex flex-row"
+                type="button" id="dropdownWhen" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Πότε
+                <i class="bi bi-caret-down-fill text-gold fs-4"></i>
+              </button>
+
+              <div class="dropdown-menu little-dropdown" aria-labelledby="dropdownWhen">
+                <div class="dropdown-item px-0 py-2" onclick="getType(this)">Σήμερα</div>
+                <div class="dropdown-item px-0 py-2" onclick="getType(this)">Αυτήν την εβδομάδα</div>
+                <div class="dropdown-item px-0 py-2" onclick="getType(this)">Αυτόν τον μήνα</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div
+            class="col-lg-5 p-0 m-0 py-3 py-lg-0 col-12 d-flex justify-content-center justify-content-lg-start align-items-end">
+
+            <div
+              class="dropdown text-dark-blue bg-cream border-bottom border-2 p-0 m-0 border-dark-blue w-75 d-flex justify-content-center align-items-center">
+              <button
+                class="btn dropdownText text-dark-blue w-100 text-start bg-transparent p-0 m-0 dropdown-toggle justify-content-between d-flex flex-row"
+                type="button" id="dropdownType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Είδος
+                <i class="bi bi-caret-down-fill text-gold fs-4"></i>
+              </button>
+              <div class="dropdown-menu little-dropdown" aria-labelledby="dropdownType">
+                <div class="dropdown-item px-0 py-2" onclick="getType(this)">Πολιτισμός</div>
+                <div class="dropdown-item px-0 py-2" onclick="getType(this)">Δραστηριότητες</div>
+                <div class="dropdown-item px-0 py-2" onclick="getType(this)">Αθλητισμός</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-2 py-2 py-lg-0   d-flex justify-content-center justify-content-lg-end align-items-end bg-cream bg-transparent">
+            <button class="btn btn-primary px-4 py-2 text-white btn-text" onclick="getDate()">Αναζήτηση</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 bg-transparent border-1 border border-gold">
+        <div id='datepicker' class="datepicker d-inline w-100 text-gold fs-4 fw-light">
+        </div>
+      </div>
+
+    </div>
+
+    <div
+      class="col-12 py-1 py-md-3 py-lg-5 flex-column-reverse flex-lg-row d-flex justify-content-center align-content-center text-gold fw-bold text-gold position-relative">
+    </div>
+
+    <div class="row g-2 g-lg-5 w-100">
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div data-date="22/11/2021"
+        class="col-12 col-md-4 d-flex events events-hide align-items-center justify-content-center">
+        <a class=" text-decoration-none w-100 d-flex align-items-center justify-content-center">
+          <div class="card wtd-card border-0 shadow-lg text-gold w-100">
+            <img src="/imgs/IMG_3464.JPG" class="card-img-top wtdph1 img-fluid" alt="...">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title  text-dark-blue wtdct1">Panigiri </h5>
+              <h5 class="card-subtitle text-dark-blue wtdct1"><i class="bi bi-calendar me-3"></i> 22/11/2021</h5>
+
+              <div class="mt-auto mb-1">
+                <div href="" class="bg-transparent ahref-div d-flex align-items-start justify-content-start">
+                  <div class="text-gold fw-bold align-self-center h-100 fs-6 wtddiscover"></div>
+                  <div class="iright-prolonged fw-bolder p-0">
+                    <i class="ms-2 bi bi-arrow-right scalex text-gold fw-bolder opacity-100 fs-5"></i>
+                    <img src="/portals/0/Images/various/right-prolonged.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+
+    </div>
+
+    <div class="col-12 py-1 py-md-3 py-lg-5 d-flex justify-content-center align-content-center">
+      <a href="/" class="ahref-div viewAllHighlights text-gold fs-5 fw-light">
+
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      $('#datepicker').datepicker({
+        format: "dd/mm/yyyy",
+        maxViewMode: 2,
+        language: "el",
+        todayHighlight: true,
+        templates: {
+          leftArrow: '<i class="bi bi-arrow-left text-gold fs-2 fw-bold"></i>',
+          rightArrow: '<i class="bi bi-arrow-right text-gold fs-2 fw-bold"></i>'
+        }
+      });
+    });
+
+    function getDate() {
+
+      let datepicker = document.getElementById('datepicker');
+
+      let selectedDate = $('.datepicker').data('datepicker').getFormattedDate('dd/mm/yyyy');
+
+      var events = document.querySelectorAll(".events");
+
+      events.forEach(element => {
+
+        eventDate = element.getAttribute('data-date');
+
+        if (eventDate == selectedDate) {
+          if (element.classList.contains('d-none')) {
+            element.classList.remove("d-none");
+            element.classList.add("d-block");
+          }
+
+        }
+        else {
+          element.classList.add("d-none");
+          element.classList.remove("d-block");
+        }
+
+
+      });
+
+      let type = document.getElementById('dropdownType');
+
+      // if (period.innerHTML == "Σήμερα") {
+      //   let selectedDate  = new Date();
+
+      //   selectedDate = selectedDate.getFormattedDate('dd/mm/yyyy');
+
+      //   events.forEach(element => {
+
+      //     eventDate = element.getAttribute('data-date');
+
+      //     if (eventDate == selectedDate) {
+      //       if (element.classList.contains('d-none')) {
+      //         element.classList.remove("d-none");
+      //         element.classList.add("d-block");
+      //       }
+
+      //     }
+      //     else {
+      //       element.classList.add("d-none");
+      //       element.classList.remove("d-block");
+      //     }
+
+
+      //   });
+      // }
+
+    }
+
+    function getType(e) {
+
+      let dropdown = e;
+      let dropdownMenu = dropdown.parentElement;
+      dropdownMenu.parentElement.innerHTML = dropdown.innerHTML;
+
+
+    }
+
+
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- Script -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#datepicker').datepicker();
+  });
+</script>
+
+
+</script>
+
+<script src="/js/bootstrap.bundle.min.js" />
