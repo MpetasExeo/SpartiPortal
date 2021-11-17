@@ -1089,7 +1089,8 @@ background-color: #125564 !important;
   display: block;
 } */
 
-.datepicker table tr td.day.focused, .datepicker table tr td.day:hover{
+.datepicker table tr td.day.focused,
+.datepicker table tr td.day:hover {
   background-color: #f0eadc !important;
 }
 
@@ -1239,11 +1240,8 @@ background-color: #125564 !important;
   overflow-y: visible;
 }
 
-.wtd-card {
-  height: 36.75rem;
-  max-width: 24rem;
-  border-radius: 0ch;
-  overflow-y: visible;
+.events-card {
+  max-width: 40rem !important;
 }
 
 .wtd-card .card-title {
