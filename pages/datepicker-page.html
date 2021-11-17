@@ -282,9 +282,8 @@
 
       let dropdown = e;
       let dropdownMenu = dropdown.parentElement;
-      dropdownMenu.parentElement.innerHTML = dropdown.innerHTML;
-
-
+      let parentParent =dropdownMenu.parentElement; 
+      parentParent.querySelector(".btn").innerHTML = dropdown.innerHTML +  `<i class="bi bi-caret-down-fill text-gold fs-4"></i>`;
     }
 
 
