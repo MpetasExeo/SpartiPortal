@@ -348,6 +348,29 @@ footer * > ul > li > a > section * {
   text-align: left;
 }
 
+.mystras-expandable-title {
+  font-family: Noto Serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.mystras-wts-paragraph {
+  position: relative;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  font-family: Noto Sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.0625rem;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .blend-up {
   position: relative;
   margin-top: -5rem;
@@ -1639,6 +1662,13 @@ background-color: #125564 !important;
   }
 
   .places-secondary-paragraph {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .mystras-wts-paragraph {
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
