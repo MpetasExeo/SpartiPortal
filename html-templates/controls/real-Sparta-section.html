@@ -43,11 +43,11 @@
 
         var btnText = "";
         var btnTextGR = "Ανακαλύψτε";
-        var btnTextUS = "Discover";
+        var btnTextUS = "Entdecken";
 
         var title = "";
         var titleGr = "Σπάρτη, μια από τις ομορφότερες πόλεις της Ελλάδας !";
-        var titleUS = "Sparta, one of the most beautiful cities in Greece!";
+        var titleUS = "Sparta, eine der schönsten Städte Griechenlands!";
 
         var brLines = '<br><br>';
         var mainText = "";
@@ -65,16 +65,14 @@
           `Ανακαλύψτε την αληθινή Σπάρτη!`;
 
 
-        var mainTextUS = `A place that will pleasantly surprise you with its lively history, imposing landscape and theirs
-            hospitable
-            his people!
-            A versatile destination, offering great routes, attractions, rich images, and flavors
-            feelings!
-            The glorious past of the city is not the only reason to visit it! Discover the place beyond
-            the
-            legend and enjoy unique experiences in an environment of unparalleled natural beauty.`
+        var mainTextUS = `
+Ein Ort, der Sie mit seiner lebendigen Geschichte, der imposanten Landschaft und den gastfreundlichen Menschen angenehm überraschen wird!
+
+Ein vielseitiges Reiseziel, das wunderbare Routen, Attraktionen, reiche Bilder, Aromen und Emotionen bietet!
+
+Die glorreiche Vergangenheit der Stadt ist nicht der einzige Grund, sie zu besuchen! Entdecken Sie den Ort jenseits des Mythos und genießen Sie einzigartige Erlebnisse in einer Umgebung von unvergleichlicher natürlicher Schönheit.`
           + brLines +
-          `Discover the real Sparta!`;
+          `Entdecken Sie die echte Sparta!`;
 
         if (window.location.href.indexOf("el-gr") > -1) {
           title = titleGr;
@@ -86,7 +84,7 @@
           title = titleUS;
           btnText = btnTextUS;
           mainText = mainTextUS;
-          ahref = "/en-us/Discover/Sparta";
+          ahref = "/de-de/Discover/Sparta";
         }
         document.querySelector(".btnlink1").href = ahref;
         document.querySelector(".mainText").innerHTML = mainText;
@@ -98,7 +96,7 @@
 
 
     document.addEventListener('DOMContentLoaded', (event) => {
-      populateTextsSparta.populate();
+      populateTextsSparta1.populate();
     });
 
   </script>

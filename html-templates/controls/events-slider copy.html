@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.sparti.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-white overflow-auto">
+
+  <div class="scrollable-container">
+    <div class="header-spacer  py-5 bg-dark-blue"></div>
+
+    <div id="SliderPane" class="position-relative" runat="server">
+      <div class="places-grid-up d-none d-xl-block">
+        <img src="/portals/0/Images/various/grid.png" class="img-fluid" alt="">
+      </div>
+      <div class="back-button d-flex d-none d-xl-block align-items-center text-decoration-underline text-gold fw-bold"
+        onclick="history.back()" type="submit" value="Cancel">
+        <i class="bi bi-arrow-left fs-4 fw-bolder mx-2 text-gold"></i>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+
+          <div id="ContentPane" runat="server" />
+        </div>
+      </div>
+    </div>
+    <!-- End : Content Pane : full width -->
+
+    <section class="container">
+      <!--#include file = "layouts/content-areas.ascx" -->
+    </section>
+    <!-- End : Content Areas -->
+
+
+    <footer class="text-center bg-dark-blue text-lg-start w-100">
+      <!--#include file = "layouts/footer.ascx" -->
+    </footer>
+
+  </div>
+
+
+
+
+  <script type="text/javascript">
+
+    // let populateTextswtd = {
+    //   populate: function () {
+
+    //     var btnText = "";
+    //     var btnTextGR = "More";
+    //     var btnTextUS = "Discover";
+
+    //     var title = "";
+    //     var titleGr = "What to do";
+    //     var titleUS = "What to do";
+
+    //     const destinationsGr = ["Εκδηλώσεις", "Αρχαιολογικοί Χώροι & Μνημεία", "Γατρονομία", "Δραστηριότητες", "Μουσεία", "Θρησκευτικά Μνημεία"];
+    //     const destinationsUS = ["Events", "Archaelogical Sites & Monuments", "Gastronomy", "Outdor", "Museums", "Religious Monuments"];
+
+    //     if (window.location.href.indexOf("el-gr") > -1) {
+    //       title = titleGr;
+    //       btnText = btnTextGR;
+
+    //       destinationsGr.forEach(element => {
+    //         var indexI = destinationsGr.indexOf(element);
+    //         var ahrefindex = (indexI).toString();
+
+    //         var photoUrl = "/portals/0/Images/highlights/" + destinationsUS[destinationsGr.indexOf(element)].toString().replace(/\s/g, "-") + "-1.jpg"
+    //         var ctSelector = "." + "ct" + ahrefindex;
+    //         var selector = "." + "ahref" + ahrefindex;
+    //         var phSelector = "." + "ph" + ahrefindex;
+
+    //         var ph = document.querySelector(phSelector).src = photoUrl
+    //         var ct = document.querySelector(ctSelector).innerHTML = element;
+    //         var a = document.querySelector(selector).href = "/el-gr/" + destinationsUS[destinationsGr.indexOf(element)].toString().replace(/\s/g, "-");
+    //       });
+
+    //       ahref = "/el-gr/Discover";
+    //     }
+    //     else {
+    //       title = titleUS;
+    //       destinationsUS.forEach(element => {
+    //         var indexI = destinationsUS.indexOf(element);
+    //         var ahrefindex = (indexI).toString();
+
+    //         var photoUrl = "/portals/0/Images/highlights/" + element.replace(/\s/g, "-") + "-1.jpg"
+    //         var ctSelector = "." + "ct" + ahrefindex;
+    //         var selector = "." + "ahref" + ahrefindex;
+    //         var phSelector = "." + "ph" + ahrefindex;
+
+    //         var ph = document.querySelector(phSelector).src = photoUrl;
+    //         var ct = document.querySelector(ctSelector).innerHTML = element;
+    //         var a = document.querySelector(selector).href = "/en-us/" + element.replace(/\s/g, "-");
+    //       });
+
+
+
+    //       btnText = btnTextUS;
+    //       ahref = "/en-us/Discover";
+    //     }
+    //     document.querySelector(".ahref-div").href = ahref;
+    //     document.querySelector(".discover").innerHTML = btnText;
+    //     document.querySelector(".title").innerHTML = title;
+    //   }
+    // }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var carousel = document.getElementById('eventsSlider')
+      let items = carousel.querySelectorAll(".carousel .carousel-item");
+
+      items.forEach((el) => {
+        let next = el.nextElementSibling;
+        for (var i = 1; i < 2; i++) {
+          if (!next) {
+            // wrap carousel by using first child
+            next = items[0];
+          }
+          let cloneChild1 = next.cloneNode(true);
+          el.appendChild(cloneChild1.children[0]);
+          next = next.nextElementSibling;
+        }
+      });
+    })
+
+
+  </script>
+
+  <script src="/js/index.js"></script>
+  <script src="/js/bootstrap.bundle.min.js" />
+</body>
+
+</html>

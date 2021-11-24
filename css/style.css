@@ -90,6 +90,16 @@ ul > li > a:visited {
   left: 0.5rem;
 }
 
+/* .discover-card:hover > img {
+  transform: scale(1.2);
+  -webkit-transition: all 3.5s ease;
+  -moz-transition: all 3.5s ease;
+  -o-transition: all 3.5s ease;
+  -ms-transition: all 3.5s ease;
+  transition: all 3.5s ease;
+  vertical-align: middle;
+} */
+
 footer {
   overflow-x: hidden;
   overflow-y: auto !important;
@@ -191,7 +201,7 @@ footer * > ul > li > a > section * {
 
 .nav-link {
   font-family: Noto Sans;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.375rem;
@@ -339,7 +349,7 @@ footer * > ul > li > a > section * {
   margin-right: 9.3333333rem;
   margin-top: 7.5rem;
   margin-bottom: 5rem;
-  font-family: Noto Sans;
+  font-family: Noto Serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -738,11 +748,11 @@ li {
 }
 
 .active .iframe-button {
-  background-color: #e4e4e4;
+  background-color: #d7ecf0;
 }
 
 .iframe-button {
-  background-color: #f2f0ed;
+  background-color: #d7ecf0;
 }
 
 .iframe-tab-inner {
@@ -906,6 +916,36 @@ li {
   padding-bottom: 2.25rem;
 }
 
+.events-hero {
+  width: 100%;
+  height: 100vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/various/events.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.plan-hero {
+  width: 100%;
+  height: 100vh !important;
+  background: linear-gradient(
+      180deg,
+      #125564cc 32.81%,
+      rgba(18, 85, 100, 0) 100%
+    ),
+    url("/portals/0/Images/various/useful.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .homepage-section-subtitle {
   font-family: Noto Sans;
   font-size: 1.125rem;
@@ -954,15 +994,20 @@ font-family: 'Noto Serif', serif;
   background-attachment: fixed;
 }
 
-.home-hero {
+.calendar-hero {
   width: 100%;
   /* height: 80vh !important; */
   height: 100vh !important;
-  background: url("/portals/0/Images/heros/calendar.jpg");
+  background: url("/portals/0/Images/various/events.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.navbar-icons > i {
+  color: white !important;
+  font-size: 1.5rem !important;
 }
 
 .close-menu-btn:hover {
@@ -971,7 +1016,7 @@ font-family: 'Noto Serif', serif;
 }
 .close-menu-btn {
   cursor: pointer;
-  color: #bbb7ad;
+  color: #44bba6;
 }
 
 .datepicker-inline {
@@ -1187,12 +1232,27 @@ background-color: #125564 !important;
   background-attachment: fixed;
 }
 .discover-card {
+  background-color: transparent;
   width: 32.0625rem;
   height: 27.875rem;
   border-width: 0;
   border-radius: 0rem !important;
   overflow: hidden;
   transition: all 0.3s ease-in;
+}
+
+.col-12
+  .py-1
+  .py-md-3
+  .py-lg-5
+  .d-flex
+  .justify-content-center
+  .align-content-center
+  .text-gold
+  .fs-1
+  .fw-bold
+  .text-gold {
+  font-family: Noto Serif;
 }
 
 .discover-card:hover {
@@ -1218,9 +1278,23 @@ background-color: #125564 !important;
   background-color: #00000000 !important;
 }
 
+.places-grid-up {
+  position: absolute;
+  left: -33rem;
+  top: 7rem;
+  z-index: 3;
+}
+
+.back-button {
+  position: absolute;
+  left: 7rem;
+  top: 6.75rem;
+  z-index: 3;
+}
+
 .discover-card .card-title {
   font-family: Noto Serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: 2.75rem;
@@ -1248,7 +1322,7 @@ background-color: #125564 !important;
 }
 
 .discover-card .moreBtn:hover {
-  background-color: #bbb7ad !important  ;
+  background-color: #44bba6 !important  ;
 }
 
 .discover-card:hover .moreBtn {
@@ -1259,6 +1333,10 @@ background-color: #125564 !important;
   transform: scaleX(1.5);
 }
 
+.wtd-card .card-body {
+  padding: 0;
+}
+
 .wtd-card .card-img-top {
   height: 24.75rem;
   object-fit: cover;
@@ -1266,6 +1344,7 @@ background-color: #125564 !important;
   z-index: 0 !important;
   width: 100%;
   border-radius: 0px;
+  background-color: transparent;
 }
 
 .wtd-card {
@@ -1277,6 +1356,7 @@ background-color: #125564 !important;
 
 .events-card {
   max-width: 40rem !important;
+  background-color: transparent !important;
 }
 
 .wtd-card .card-title {
@@ -1396,6 +1476,24 @@ background-color: #125564 !important;
   align-self: center; */
 }
 
+.btn-text {
+  transition: all 0.125s ease;
+}
+
+.wtd-card {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: all ease;
+}
+
+.wtd-card:hover .card-img-top {
+  box-shadow: 5px 5px 7px 2px rgba(0, 0, 0, 0.083) !important;
+}
+
+.ahref-div:hover .btn-text {
+  background-color: #44bba6 !important;
+}
+
 .text-justify {
   text-align: justify !important;
 }
@@ -1436,7 +1534,7 @@ background-color: #125564 !important;
 }
 
 .carousel-buttons:hover {
-  background-color: #bbb7ad !important;
+  background-color: #44bba6 !important;
 }
 
 .btn-text {
@@ -1568,10 +1666,87 @@ background-color: #125564 !important;
   }
 }
 
+@media (max-width: 1200px) {
+  .blend-up {
+    position: relative;
+    margin-top: 0rem;
+    z-index: 2;
+  }
+
+  .places-grid-up {
+    position: absolute;
+    left: -36rem;
+    top: 5rem;
+    z-index: 3;
+  }
+}
+
+@media (min-width: 2560px) {
+  .back-button {
+    position: absolute;
+    left: 10.5rem;
+    top: 6.75rem;
+    z-index: 3;
+  }
+
+  .places-grid-up {
+    position: absolute;
+    left: -31.5rem;
+    top: 7rem;
+    z-index: 3;
+  }
+}
+
+@media (min-width: 1300px) {
+  .places-grid-up {
+    position: absolute;
+    left: -35rem;
+    top: 7rem;
+    z-index: 3;
+  }
+
+  .back-button {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 3;
+  }
+}
+
+/* @media (max-width: 1440px) {
+  .back-button {
+    position: absolute;
+    left: 5.6rem;
+    top: 1.5rem;
+    z-index: 3;
+  }
+
+  .places-grid-up {
+    position: absolute;
+    left: -34.5rem;
+    top: 7rem;
+    z-index: 3;
+  }
+} */
+
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view ============ */
 @media (max-width: 991px) {
+  .places-grid-up {
+    position: absolute;
+    left: -33rem;
+    top: 7rem;
+    z-index: 3;
+  }
+
+  .back-button {
+    position: absolute;
+    left: 7rem;
+    top: 6.75rem;
+    z-index: 3;
+  }
+
   .navbar.fixed-top .navbar-collapse,
   .navbar.sticky-top .navbar-collapse {
     overflow-y: auto;
@@ -1593,6 +1768,12 @@ background-color: #125564 !important;
   .footer-grid {
     width: 0;
     height: 0;
+  }
+
+  .blend-up {
+    position: relative;
+    margin-top: 0rem;
+    z-index: 2;
   }
 
   .footer-sparta-logo {
